@@ -1,9 +1,10 @@
 import React from "react";
 import styles from "./Info.module.css";
-export default function Info({ info }) {
+export default function Info({ info, cityName }) {
   console.log(info);
   return (
     <div className={styles.container}>
+      <h1 className={styles.cityName}>{cityName.toUpperCase()}</h1>
       <ul className={styles.list}>
         {info.map((item, index) => (
           <li key={index}>

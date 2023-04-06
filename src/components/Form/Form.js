@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import styles from "./Form.module.css";
-export default function Form({ setInfo }) {
+export default function Form({ setInfo, setCityName }) {
   const [city, setCity] = useState("");
 
   const formSubmit = async (e) => {
@@ -14,18 +14,19 @@ export default function Form({ setInfo }) {
     await axios
       .get(baseURL)
       .then((res) => setInfo(res.data.forecast.forecastday));
+    setCityName(city);
   };
 
   return (
     <div>
       <form onSubmit={formSubmit}>
         <div>
-          <div className={styles.btnCty}>
+          {/* <div className={styles.btnCty}>
             <button onClick={() => setCity("Ankara")}>Ankara</button>
             <button onClick={() => setCity("İstanbul")}>İstanbul</button>
             <button onClick={() => setCity("İzmir")}>İzmir</button>
             <button onClick={() => setCity("Antalya")}>Antalya</button>
-          </div>
+          </div> */}
 
           <input
             className={styles.ctyInput}

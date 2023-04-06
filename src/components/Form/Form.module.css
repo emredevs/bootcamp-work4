@@ -4,7 +4,6 @@
 .btn {
   border: 0;
   outline: 0;
-  background-color: #cc7218;
   margin-top: 2%;
   border-radius: 20px;
   padding: 1%;
@@ -12,6 +11,13 @@
   color: black;
   margin-left: 1%;
   cursor: pointer;
+  background: #ccc;
+  opacity: 0.6;
+}
+.btn:hover {
+  background: #ccc;
+  transition: 0.2s;
+  opacity: 1;
 }
 .ctyInput {
   border: 0;

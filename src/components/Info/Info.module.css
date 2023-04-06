@@ -20,15 +20,22 @@
   gap: 10%;
   width: 50%;
   padding: 2%;
-
   font-family: "Times New Roman", Times, serif;
 }
 .list li {
   border: 1px solid black;
   border-radius: 10px;
   padding: 2%;
+  backdrop-filter: blur(10px);
+  color: aliceblue;
 }
-.list li:hover {
-  transition: 0.2s;
-  background-color: #cc7218;
+.list li > * {
+  height: 60px;
+  width: 110px;
+}
+.cityName {
+  position: absolute;
+  left: 10%;
+  top: 18%;
+  color: #ccc;
 }
