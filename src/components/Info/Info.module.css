@@ -17,10 +17,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10%;
-  width: 50%;
+  gap: 20px;
+  width: 100%;
   padding: 2%;
-  font-family: "Times New Roman", Times, serif;
 }
 .list li {
   border: 1px solid black;
@@ -28,14 +27,17 @@
   padding: 2%;
   backdrop-filter: blur(10px);
   color: aliceblue;
+  height: 260px;
+  width: 200px;
 }
-.list li > * {
-  height: 60px;
-  width: 110px;
-}
+
 .cityName {
   position: absolute;
-  left: 10%;
+  left: 11.6%;
   top: 18%;
   color: #ccc;
+}
+.list > li > img {
+  object-fit: cover;
+  height: 80px;
 }

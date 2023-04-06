@@ -11,7 +11,7 @@ export default function Info({ info, cityName }) {
             <h4>{item.date}</h4>
             <img src={item.day.condition.icon} alt="" />
             <h3>
-              {item.day.maxtemp_c} <sup>o</sup>C
+              {Math.floor(item.day.maxtemp_c)} <sup>o</sup>C
             </h3>
             <p>{item.day.condition.text}</p>
           </li>
