@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./Info.module.css";
-export default function Info({ info, cityName }) {
+import WeatherContext from "../../Context/Weather";
+export default function Info() {
+  const { info, cityName } = useContext(WeatherContext);
   console.log(info);
   return (
     <div className={styles.container}>

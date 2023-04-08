@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import axios from "axios";
 import styles from "./Form.module.css";
-export default function Form({ setInfo, setCityName }) {
-  const [city, setCity] = useState("");
+import WeatherContext from "../../Context/Weather";
+export default function Form() {
+  const { city, setCity, setInfo, setCityName } = useContext(WeatherContext);
   //form submit olduğunda API dan verileri çektiğim yer
   const formSubmit = async (e) => {
     e.preventDefault();
@@ -16,7 +17,7 @@ export default function Form({ setInfo, setCityName }) {
     await axios
       .get(baseURL)
       .then((res) => setInfo(res.data.forecast.forecastday)); //gelen verilerden sadece istediğimiz verilerin filtrelenmesi
-    setCityName(city); //Info'da şehrin ismini aldığımız yer
+    setCityName(city);
     setCity("");
   };
 
